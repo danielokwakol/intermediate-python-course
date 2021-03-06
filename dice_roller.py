@@ -1,7 +1,13 @@
 import random 
 
 def main():
-  dice_rolls =2
+  while True:    
+    try:
+      dice_rolls = int(input('Please choose the number of die: '))  
+    except Exception as exc:      
+      print(f'{exc} Please input a whole number, Only')
+      continue
+    break
   dice_sum =0
   for i in range(0,dice_rolls):
     roll = random.randint(1,6)
